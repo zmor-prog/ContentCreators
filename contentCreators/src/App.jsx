@@ -1,35 +1,52 @@
-import { useState } from 'react'
+import { useRoutes,Link } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+//import supabase from './client.js'
+import ViewYouTubers from './pages/ShowCreators'
+import YTCreator from './pages/YTCreatorPage'
+import CreateYoutuber from './pages/CreateYouTuber'
+import EditYouTuber from './pages/EditYouTuber'
+const App = () => {
+  const youtubersList = [
+  ]
+ 
 
-function App() {
-  const [count, setCount] = useState(0)
+  // Sets up routes
+  let element = useRoutes([
+    {
+      path: "/",
+      element:<ViewYouTubers data={youtubersList}/>
+    },
+    {
+      path:"/view/:id",
+      element: <YTCreator data={youtubersList} />
+    },
+    {
+      path:'/new',
+      element:<CreateYoutuber></CreateYoutuber>
+    },
+    {
+      path:"/edit/:id",
+      element: <EditYouTuber data={youtubersList} />
+    }
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+  ]);
+console.log('Starting App')
+  return ( 
+
+    <div className="App">
+
+      <div className="header">
+        <h1>Great YouTubers</h1>
+        <h2>My Favorite YouTubers</h2>
+        <Link to="/"><button className="headerBtn"> View YouTubers 🔍  </button></Link>
+        <Link to="/new"><button className="headerBtn"> Add YouTuber  </button></Link>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+        {element}
+    </div>
+
+  );
 }
 
 export default App
