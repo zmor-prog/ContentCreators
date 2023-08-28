@@ -2,15 +2,15 @@
 
 Submitted by: Zamirah Morgan
 
-About this web app: **👉🏿 app description here**
+About this web app: **Adding and Viewing Favorite Youtubers**
 
-Time spent: **👉🏿 X** hours
+Time spent: **20** hours
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-<!-- 👉🏿👉🏿👉🏿 Make sure to check off completed functionality below -->
+<!-- Make sure to check off completed functionality below -->
 - [x] **A logical component structure in React is used to create the frontend of the app**
 - [x] **At least five content creators are displayed on the homepage of the app**
 - [x] **Each content creator item includes their name, a link to their channel/page, and a short description of their content**
@@ -35,10 +35,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='https://github.com/zmor-prog/ContentCreators/blob/main/youtubers.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/zmor-prog/ContentCreators/blob/main/youtubers.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  👉🏿 GIF tool here
+GIF created with LiceCap
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
